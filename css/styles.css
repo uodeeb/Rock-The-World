@@ -1,0 +1,241 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+html{
+    scroll-behavior: smooth;
+}
+/* ---- Base Rules ---- */
+body {
+    background: #e193cd;
+    background: linear-gradient(0deg, #e193cd 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    
+}
+/* ----------------------------------------------
+ 
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+h2 {
+    border-bottom: 2px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+
+#home-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+section {
+    position: relative;
+    min-height: 12vh;
+    
+}
+
+/*____________ test scroll____________*/
+
+.collapsible {
+    background-color: #ac2a7a;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #611824 ;
+  }
+  
+  .content {
+    padding: 0 18px;
+    text-align: left;
+    border: solid 2px #fff;
+    display: none;
+    overflow: hidden;
+    background-color: #e193cd;
+    transition: max-height 0.2s ease-out;
+  }
+
+/*------------------------*/
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 8vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.up-icon{
+    width: 5vw;
+    height: 5vh;
+}
+
+.flip{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music-ins{
+    display: inline;
+
+}
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #8d174b;
+    color: #fff;
+    transition: ease 0.5s all;
+    -webkit-transition: border-color 1s ease;
+    -moz-transition: border-color 1s ease;
+    -o-transition: border-color 1s ease;
+    -ms-transition: border-color 1s ease;
+    transition: border-color 1s ease;   
+}
+
+/*_________________active class highlight________________*/
+nav ul li.active{
+    background-color:#e193cd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*
+/* Header Styles */
+
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-image: url('/images/music-bg01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Footer Styles */
+
+.page__footer {
+    background: #611824;
+    padding: 3em;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.page__footer p{
+    color: #fff;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 0.2em;
+    text-align: left;
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right; 
+}
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+
+.active-state{
+    background-color: #cc1;
+}
+
+.not-active{
+    background-color:  none;
+}
+/* work with state*/
+
+section[data-state=active-state]{
+    display: block;
+}
+
+section[data-state=not-active] {
+    display: none;
+}
+
+/*___________________ media query _____________*/
+
+@media only screen and (max-width: 35em){
+    .landing__container {
+        max-width: 100%;
+        padding: 0.2em;
+        min-height: 2vh;
+    }
+    
+    
+   
+}
+
+/*___________________ media query _____________*/
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 100%;
+        padding: 0.5em;
+        min-height: 8vh;
+    }
+}
+

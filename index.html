@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header" id="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+        <!--a navigation will be here-->
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero" id="main-head">
+      <img id="home-bg" width="100%" height="30%" src="images/music-bg02.jpg" alt="music-bg" > 
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="section1" class="">
+      <div class="landing__container">
+        <button type="button" class="collapsible">
+          <h2>Violin</h2> 
+          <img class="music-ins" width="50vw" height="50vh" src="images/001-violin.svg" alt="violin" srcset="">
+        </button>
+        <div class="content">
+        <p>Violin, byname fiddle, bowed stringed musical instrument that evolved during the Renaissance from earlier bowed instruments: the medieval fiddle; its 16th-century Italian offshoot, the lira da braccio; and the rebec. The violin is probably the best known and most widely distributed musical instrument in the world.</p>
+        <p>Like its predecessors but unlike its cousin the viol, the violin has a fretless fingerboard. Its strings are hitched to tuning pegs and to a tailpiece passing over a bridge held in place by the pressure of the strings. The bridge transmits the strings’ vibrations to the violin belly, or soundboard, which is made of pine and amplifies the sound. Inside the instrument, beneath the treble foot of the bridge and wedged between the violin belly and back, which is made of maple, is the sound post, a thin stick of pine that transmits the string vibrations to the instrument’s back, contributing to the characteristic violin tone. The belly is supported from beneath by the bass bar, a narrow wood bar running lengthwise and tapering into the belly. It also contributes to the resonance of the instrument. The sidewalls, or ribs, are constructed of pine-lined maple.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section2" data-nav="section2">
+      <div class="landing__container">
+        <button type="button" class="collapsible">
+          <h2>Electric Guitar</h2>
+          <img class="music-ins" width="50vw" height="50vh" src="images/002-electric-guitar.svg" alt="electric-guitar" srcset="">
+        </button>
+        <div class="content">
+        <p>Developed in the early part of the twentieth century, the electric guitar has become one of the most important instruments in popular music. Today's solid-body electric guitar derives from the acoustic guitar, an instrument first introduced in America as the Spanish-style guitar. Even though body designs of modern electric guitars often differ from their acoustic predecessors, all guitars are constructed with the same simple template. All guitars, acoustic or electric, are built with a bridge, body, and neck. The most significant difference is that acoustic guitars are hollow while electric guitars have a solid body.</p>
+        <p>For years, the acoustic guitar was limited to a supporting role in large musical ensembles because of its volume. Thus, the major motivation that drove the creation of the electric guitar was instrumentalists' desire for greater volume. Predecessors of the modern electric guitar were amplified acoustic guitars crudely modified by inventors who attached wires, magnets, and other "pickup" attachments. (Pickups are electromagnetic devices that increase volume.) However, as technology started advancing in the 1930s, newer versions became more complex, and the electric guitar became a solo instrument, a development that helped expand musical styles.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section3" data-nav="section3">
+      <div class="landing__container">
+        <button type="button" class="collapsible">
+          <h2>Cello</h2>
+          <img class="music-ins" width="50vw" height="50vh" src="images/003-violoncello.svg" alt="violoncello" srcset="">
+        </button>
+        <div class="content">
+        <p>Cello, also called violoncello, French violoncelle, German cello or violoncello, bass musical instrument of the violin group, with four strings, pitched C–G–D–A upward from two octaves below middle C. The cello, about 27.5 inches (70 cm) long (47 inches [119 cm] with the neck), has proportionally deeper ribs and a shorter neck than the violin.
+          cello; bow</p>
+        <p>The earliest cellos were developed during the 16th century and frequently were made with five strings. They served mainly to reinforce the bass line in ensembles. Only during the 17th and 18th centuries did the cello replace the bass viola da gamba as a solo instrument. During the 17th century the combination of cello and harpsichord for basso continuo parts became standard. Joseph Haydn, Mozart, and later composers gave increased prominence to the cello in instrumental ensembles. Notable works for the instrument include J.S. Bach’s six suites for unaccompanied cello; Beethoven’s five sonatas for cello and piano; the concertos of Édouard Lalo, Antonín Dvořák, Camille Saint-Saëns, Edward Elgar, and Samuel Barber; the sonatas of Zoltán Kodály and Claude Debussy; and the Bachianas brasileiras of Heitor Villa-Lobos, for eight cellos and soprano. Outstanding cellists of the 20th and 21st centuries include Pablo Casals, Mstislav Rostropovich, and Yo-Yo Ma, among others.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section4" data-nav="section4">
+      <div class="landing__container">
+        <button type="button" class="collapsible">
+          <h2>Piano</h2>
+          <img class="music-ins" width="50vw" height="50vh" src="images/004-piano.svg" alt="piano" srcset="">
+        </button>
+        <div class="content">
+        <p>Although the piano can be classified as a string instrument due to the fact that the sounds come from the vibration of strings, it can also be classified as a percussion instrument because a hammer strikes those strings. In this way it is similar to a dulcimer.
+          The dulcimer is an instrument that originated in the Middle East and spread to Europe in the 11th century. It features a simple resonating box with strings stretched on top of it. Much like a piano, a small hammer is used to hit the strings, which is why the dulcimer is considered to be a direct ancestor of the piano.</p>
+        <p>The piano is also considered to be a part of the keyboard family. The history of instruments with keyboards dates far back and originates from the organ, which sends bursts of air through pipes to make sound. Craftsmen improved upon the organ to develop an instrument that was a step closer to the piano, the clavichord.
+          The clavichord first appeared in the 14th century and became popular during the Renaissance Era. Pressing a key would send a brass rod, called a tangent, to strike the string and cause vibrations that emit sound over a range of four to five octaves.</p>
+        </div>
+      </div>
+    </section>
+    <div id="back">
+      <img class="up-icon flip" src="images/level-up-alt-solid.svg" alt="back-to-top" >
+      <a href="#main-head">
+      <img id="up" class="music-ins" width="50vw" height="50vh" src="images/turntable.svg" alt="back-to-top" >
+      </a>
+      <img class="up-icon" src="images/level-up-alt-solid.svg" alt="up-icon">
+    </div>
+  </main>
+  <footer class="page__footer">
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+    <p>&copy Rock The World 2020  </p>
+  </footer>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
